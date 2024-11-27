@@ -14,8 +14,8 @@ def add_task():
     # 建立新任務
     new_task = {
         "title": title,
-        "description": description or None,
-        "due_date": due_date or None,
+        "description": description or '',
+        "due_date": due_date or '',
     }
     pending_tasks.append(new_task)
     print(f"\n成功新增任務：{new_task['title']}\n")
