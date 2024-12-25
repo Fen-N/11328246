@@ -1,73 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Todo</class>
+ <widget class="QWidget" name="Todo">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>576</width>
+    <width>573</width>
     <height>458</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Todo</string>
   </property>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>561</width>
-     <height>441</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="2">
-     <widget class="QSplitter" name="splitter">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="markCompleteButton">
+     <property name="styleSheet">
+      <string notr="true">background-color: green; color: white; font-weight: bold; border-radius: 5px; padding: 5px;</string>
+     </property>
+     <property name="text">
+      <string>Mark Complete</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="deleteButton">
+     <property name="styleSheet">
+      <string notr="true">background-color: red; color: white; font-weight: bold; border-radius: 5px; padding: 5px;</string>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QListWidget" name="taskList"/>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLineEdit" name="taskInput">
+      <property name="placeholderText">
+       <string>Enter a new task...</string>
       </property>
-      <widget class="QLineEdit" name="taskInput">
-       <property name="placeholderText">
-        <string>Enter a new task...</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="addButton">
-       <property name="styleSheet">
-        <string notr="true">background-color: green; color: white; font-weight: bold; border-radius: 5px; padding: 5px;</string>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </widget>
      </widget>
-    </item>
-    <item row="1" column="0" colspan="2">
-     <widget class="QListWidget" name="taskList"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="markCompleteButton">
+     <widget class="QPushButton" name="addButton">
       <property name="styleSheet">
        <string notr="true">background-color: green; color: white; font-weight: bold; border-radius: 5px; padding: 5px;</string>
       </property>
       <property name="text">
-       <string>Mark Complete</string>
+       <string>Add</string>
       </property>
      </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QPushButton" name="deleteButton">
-      <property name="styleSheet">
-       <string notr="true">background-color: red; color: white; font-weight: bold; border-radius: 5px; padding: 5px;</string>
-      </property>
-      <property name="text">
-       <string>Delete</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
