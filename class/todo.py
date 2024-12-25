@@ -6,7 +6,7 @@ class ToDoApp(QWidget):
     def __init__(self):
         super().__init__()
         # 載入 UI
-        uic.loadUi('todo_app.ui', self)
+        uic.loadUi('class/todo_app.ui', self)
 
         # 連接功能
         self.addButton.clicked.connect(self.add_task)

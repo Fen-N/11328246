@@ -6,7 +6,7 @@ class UI01(QWidget):
     def __init__(self):
         super().__init__()
         # 載入 UI 文件
-        uic.loadUi('uitest.ui', self)
+        uic.loadUi('class/uitest.ui', self)
 
         # 連接按鈕 quitButton 到退出功能
         self.quitButton = self.findChild(QPushButton, 'QuitButton')

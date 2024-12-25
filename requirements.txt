@@ -1,5 +1,6 @@
 click==8.1.7
 colorama==0.4.6
+pygame==2.6.1
 PyQt6==6.4.2
 pyqt6-plugins==6.4.2.2.3
 PyQt6-Qt6==6.4.3
