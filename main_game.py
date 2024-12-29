@@ -8,11 +8,10 @@ screen = pygame.display.set_mode((800, 600))
 
 # Title and Icon
 pygame.display.set_caption("Space Invaders")
-icon = pygame.image.load('ufo.png')
+icon = pygame.image.load('image/ufo.png')
 pygame.display.set_icon(icon)
 
 # Player
-playerImg = pygame.image.load('player.png')
 playerX = 400
 playerY = 300
 playerX_change = 0
@@ -20,7 +19,7 @@ playerY_change = 0
 
 class Player:
     def __init__(self, x, y):
-        self.image = pygame.image.load('player.png')
+        self.image = pygame.image.load('image/player.png')
         self.image = pygame.transform.scale(self.image, (64, 64))
         self.x = x
         self.y = y
