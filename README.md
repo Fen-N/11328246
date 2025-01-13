@@ -19,12 +19,12 @@
 
 - 這是主要操控的角色，操控方式為WASD，點擊畫面可射子彈
   
-![角色](image\player.png)
+![角色](image/player.png)
 - 這是敵方ufo，如果被它的子彈打到會扣一顆心
-![ufo](image\ufo.png)
+![ufo](image/ufo.png)
 
 - 實際遊玩畫面
-![遊玩畫面](image\遊玩畫面.png)
+![遊玩畫面](image/遊玩畫面.png)
 
 ---
 
