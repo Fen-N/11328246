@@ -6,6 +6,13 @@ import time
 # Initialize the game
 pygame.init()
 
+# Initialize the mixer
+pygame.mixer.init()
+
+# Load and play background music
+pygame.mixer.music.load('music/Time_for_adventure.mp3')
+pygame.mixer.music.set_volume(0.5)  # Set volume (0.0 to 1.0)
+
 # Create the screen
 screen = pygame.display.set_mode((800, 600))
 
@@ -221,7 +228,9 @@ while running:
                 if start_button.collidepoint(event.pos):
                     show_countdown()
                     game_started = True
+                    pygame.mixer.music.play(-1)  # Play music in a loop
     elif game_over or player_failed:
+        pygame.mixer.music.stop()  # Stop music
         message = "Enemy defeated!" if game_over else "    You Failed"
         play_again_button, exit_button = show_game_over_screen(message)
         for event in pygame.event.get():
@@ -242,6 +251,7 @@ while running:
                     enemies.empty()
                     enemies.add(enemy1)
                     enemies.add(enemy2)
+                    pygame.mixer.music.play(-1)  # Play music in a loop
                 if exit_button.collidepoint(event.pos):
                     running = False
     else:
